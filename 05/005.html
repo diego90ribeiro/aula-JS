@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeiros passos com DOM </title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color:#f1f1f1;
+            font: normal 18px arial ;
+        }
+        .centraliza {
+            width:800px;
+            padding: 10px;
+            height: auto;
+            background-color: #b09df7;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="centraliza">
+        <h1>Iniciando estudos com DOM com JS.</h1>
+        <p>Mensagem 001.</p>
+        <p>Mensagem 002.</p>
+        <div id="msg">Clique em mim.</div>
+        <br>
+        
+        
+        <script>
+           
+        //Para usar um componentes como <p>,<br> se usa a TAG ->  document.getElementsByTagName('p')
+        var p1 = document.getElementsByTagName('p')[0]
+        window.document.write('Voçe obteve esse resultado:' + p1.innerText + 'Através de JS com o comando: <br>  PARAGRAFO 1   var p1 = document.getElementsByTagName("p")[0] <br> ' ) 
+        
+        //TAG ->  document.getElementsByTagName('p')        
+        var p2 = document.getElementsByTagName('p')[1]
+        window.document.write('Voçe obteve esse resultado:' + p2.innerText +  'Através de JS com o comando: <br> PARAGRAFO 2  var p2 = document.getElementsByTagName("p")[1] <br> ' ) 
+
+     
+        // Para usar um <DIV> se usa a TAG ->  document.getElementsByid('p')
+        var div = document.getElementById('msg')
+        document.write ('Voçe obteve esse resultado:' + div.innerText +  'Através de JS com o comando: <br> Div  var div = document.getElementById("msg") <br> ' )
+        
+
+        // Para usar um SELETOR se usa a TAG ->  document.getElementsByid('p')
+        var div = document.querySelector('div#msg')
+        document.write('Voçe obteve esse resultado:' + div.innerText  + 'Através de JS com o comando: <br> Div   var div = document.querySelector("div#msg") <br> ' )
+        </script> 
+   </div>
+</body>
+</html>
